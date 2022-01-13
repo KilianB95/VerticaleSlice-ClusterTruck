@@ -4,15 +4,24 @@ using UnityEngine;
 
 public class PlayerMovement : MonoBehaviour
 {
-    // Start is called before the first frame update
-    void Start()
+    CharacterController characterController;
+    public float MovementSpeed = 15;
+    public float Gravity = 9.8f;
+    private float velocity = 0;
+
+    private void Start()
     {
-        
+        characterController = GetComponent<CharacterController>();
     }
 
-    // Update is called once per frame
-    void Update()
+    private void Update()
     {
-        
+        // player movement - forward, backwards, left, right
+        float horizontal = Input.GetAxis("Horizontal") * MovementSpeed;
+        float vertical = Input.GetAxis("Vertical") * MovementSpeed;
+        characterController.Move((Vector3.right * horizontal + Vector3.forward * vertical) * Time.deltaTime);
+
+        //Gravity
+
     }
 }

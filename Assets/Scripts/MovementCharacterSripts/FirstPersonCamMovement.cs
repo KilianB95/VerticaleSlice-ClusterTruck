@@ -4,15 +4,24 @@ using UnityEngine;
 
 public class FirstPersonCamMovement : MonoBehaviour
 {
-    // Start is called before the first frame update
-    void Start()
+    public float HorizontalSpeed = 1f;
+    public float verticaleSpeed = 1f;
+    private float xRotation = 0.0f;
+    private float yRotation = 0.0f;
+    private Camera cam;
+
+    private void Start()
     {
-        
+        cam = Camera.main;
     }
 
-    // Update is called once per frame
-    void Update()
+    private void Update()
     {
-        
+        float mouseX = Input.GetAxis("Mouse X") * HorizontalSpeed;
+        float mouseY = Input.GetAxis("Mouse Y") * verticaleSpeed;
+
+        yRotation += mouseX;
+        xRotation -= xRotation = Mathf.Clamp(xRotation, -90, 90);
+        cam.transform.eulerAngles = new Vector3(xRotation, yRotation, 0.0f);
     }
 }
