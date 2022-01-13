@@ -6,8 +6,8 @@ public class FirstPersonCamMovement : MonoBehaviour
 {
     public float HorizontalSpeed = 1f;
     public float verticaleSpeed = 1f;
-    private float xRotation = 0.0f;
-    private float yRotation = 0.0f;
+    private float xRotation = 0.1f;
+    private float yRotation = 0.1f;
     private Camera cam;
 
     private void Start()
