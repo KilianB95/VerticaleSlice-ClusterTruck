@@ -8,6 +8,7 @@ public class PlayerMovement : MonoBehaviour
     public float MovementSpeed = 15;
     public float Gravity = 9.8f;
     private float velocity = 0;
+    public float Jumpspeed;
 
     private void Start()
     {
@@ -23,5 +24,11 @@ public class PlayerMovement : MonoBehaviour
 
         //Gravity
 
+
+        //Jump
+        if (Input.GetKey(KeyCode.Space))
+        {
+            GetComponent<Rigidbody>().AddForce(Vector3.up * Jumpspeed);
+        }
     }
 }
