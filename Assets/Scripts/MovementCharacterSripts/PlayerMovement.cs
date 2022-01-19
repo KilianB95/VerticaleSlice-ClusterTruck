@@ -8,11 +8,22 @@ public class PlayerMovement : MonoBehaviour
     public float MovementSpeed = 15;
     public float Gravity = 9.8f;
     private float velocity = 0;
-    public float Jumpspeed;
+    public float Jumpforce = 3;
+    public bool isGrounded;
+    [SerializeField] private Rigidbody rb;
 
     private void Start()
     {
         characterController = GetComponent<CharacterController>();
+    }
+
+    private void OnCollisionStay(Collision collision)
+    {
+        if (collision.gameObject.tag == "Ground")
+        {
+            isGrounded = true;
+            Debug.Log("weck");
+        }
     }
 
     private void Update()
@@ -24,11 +35,14 @@ public class PlayerMovement : MonoBehaviour
 
         //Gravity
 
-
-        //Jump
-        if (Input.GetKey(KeyCode.Space))
+        if(Input.GetKeyDown(KeyCode.Space) && isGrounded)
         {
-            GetComponent<Rigidbody>().AddForce(Vector3.up * Jumpspeed);
+            rb.AddForce(new Vector3(0, Jumpforce), ForceMode.Impulse);
+            Debug.Log("spatie werkt");
+           
         }
+       
     }
+
+   
 }
