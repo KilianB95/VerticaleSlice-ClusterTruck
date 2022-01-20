@@ -4,9 +4,11 @@
 TagManager:
   serializedVersion: 2
   tags:
+
+  - Ground
+
   - TurnZone
-  - Floor
-  - Truck
+
   layers:
   - Default
   - TransparentFX
