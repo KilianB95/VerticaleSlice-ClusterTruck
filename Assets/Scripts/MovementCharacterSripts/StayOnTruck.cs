@@ -4,15 +4,20 @@ using UnityEngine;
 
 public class StayOnTruck : MonoBehaviour
 {
-    // Start is called before the first frame update
-    void Start()
+
+    private void OnTriggerEnter(Collider other)
     {
-        
+      if (other.gameObject.tag == "Truck")
+      {
+            transform.parent = other.transform;
+      }  
     }
 
-    // Update is called once per frame
-    void Update()
+    private void OnTriggerExit(Collider other)
     {
-        
+        if(other.gameObject.tag == "Truck")
+        {
+            transform.parent = null;
+        }
     }
 }

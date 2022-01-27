@@ -332,6 +332,18 @@ MonoBehaviour:
   _speed: 6
   _gravity: 0.1
   _jumpHeight: 15
+--- !u!114 &1028296720
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1028296718}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 48ba13871cb20434aa1fb04e147ffb02, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &2624514854486375521
 PrefabInstance:
   m_ObjectHideFlags: 0
