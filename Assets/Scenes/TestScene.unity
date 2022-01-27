@@ -123,6 +123,7 @@ NavMeshSettings:
     debug:
       m_Flags: 0
   m_NavMeshData: {fileID: 0}
+ playermovement
 --- !u!1 &705263695
 GameObject:
   m_ObjectHideFlags: 0
@@ -236,6 +237,9 @@ Rigidbody:
   m_Constraints: 126
   m_CollisionDetection: 0
 --- !u!1 &776425769 stripped
+=======
+--- !u!1 &1065913231
+ feature
 GameObject:
   m_CorrespondingSourceObject: {fileID: -8513424388201257645, guid: 6ced3d6cc3840a2469bb8e668c2ea703, type: 3}
   m_PrefabInstance: {fileID: 1225278950}
@@ -333,6 +337,7 @@ BoxCollider:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
+ playermovement
   m_GameObject: {fileID: 1008233704}
   m_Material: {fileID: 0}
   m_IsTrigger: 1
@@ -340,6 +345,16 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 2.2830994, y: 1.214921, z: 1.7600582}
   m_Center: {x: -1.0527736, y: 1.1107185, z: -0.0000009834768}
+=======
+  m_GameObject: {fileID: 1065913231}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -45, y: -11, z: -400}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+ feature
 --- !u!1 &1191055351
 GameObject:
   m_ObjectHideFlags: 0
@@ -365,7 +380,7 @@ BoxCollider:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1191055351}
   m_Material: {fileID: 0}
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
   m_Size: {x: 1, y: 1, z: 1}
@@ -384,6 +399,7 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+ playermovement
 --- !u!1001 &1225278950
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -518,6 +534,8 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 1, y: 1, z: 1}
   m_Center: {x: 0, y: 0, z: 0}
+=======
+ feature
 --- !u!1 &1300221127
 GameObject:
   m_ObjectHideFlags: 0
@@ -611,6 +629,7 @@ Transform:
   m_Father: {fileID: 1225278954}
   m_RootOrder: 20
   m_LocalEulerAnglesHint: {x: 50, y: -30, z: 0}
+ playermovement
 --- !u!1 &1933484817 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 6065908697008662509, guid: 1c04733f535ec6a40af04355b08b1d64, type: 3}
@@ -629,3 +648,25 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Player: {fileID: 1933484817}
+=======
+
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+
+feature
