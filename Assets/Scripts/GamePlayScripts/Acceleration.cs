@@ -18,17 +18,7 @@ public class Acceleration : MonoBehaviour
 
     void FixedUpdate()
     {
-        rb.AddForce(Vector3.forward * forceAmount, ForceMode.Acceleration);
-        foreach(Transform childobject in transform)
-        {
-            Debug.Log(childobject.gameObject.name);
-            if (childobject.gameObject.tag == "Player")
-            {
-                //childobject.GetComponent<Rigidbody>().velocity = rb.velocity;
-                childobject.GetComponent<PlayerMovement>().externalForce = rb.velocity;
-            }
 
-        }
 
         
     }
