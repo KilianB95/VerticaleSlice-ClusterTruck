@@ -4,20 +4,23 @@ using UnityEngine;
 
 public class StayOnTruck : MonoBehaviour
 {
-
-    private void OnTriggerEnter(Collider other)
+    [SerializeField] private GameObject Player;
+    private void OnCollisionEnter(Collision collision)
     {
-      if (other.gameObject.tag == "Truck")
-      {
-            transform.parent = other.transform;
-      }  
+        Debug.Log(collision.gameObject.name);
+        if (collision.gameObject.tag == "Truck")
+        {
+            Debug.Log("On Truck");
+            Player.transform.parent = collision.transform;
+        }
     }
 
-    private void OnTriggerExit(Collider other)
+    private void OnCollisionExit(Collision collision)
     {
-        if(other.gameObject.tag == "Truck")
+        if (collision.gameObject.tag == "Truck")
         {
-            transform.parent = null;
+            Debug.Log("fuck");
+            Player.transform.parent = null;
         }
     }
 }
