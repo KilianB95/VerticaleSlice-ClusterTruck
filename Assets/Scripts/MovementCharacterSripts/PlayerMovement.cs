@@ -6,7 +6,7 @@ public class PlayerMovement : MonoBehaviour
 {
     CharacterController characterController;
     public float MovementSpeed = 30;
-    
+    public Vector3 externalForce;
     
 
     private void Start()
@@ -14,12 +14,12 @@ public class PlayerMovement : MonoBehaviour
         characterController = GetComponent<CharacterController>();
     }
 
-    private void FixedUpdate()
+    private void Update()
     {
         // player movement - forward, backwards, left, right
         float horizontal = Input.GetAxis("Horizontal") * MovementSpeed;
         float vertical = Input.GetAxis("Vertical") * MovementSpeed;
-        characterController.Move((Vector3.right * horizontal + Vector3.forward * vertical) * Time.deltaTime);
+        characterController.Move((Vector3.right * horizontal + Vector3.forward * vertical + externalForce) * Time.deltaTime);
 
         //Gravity
 
