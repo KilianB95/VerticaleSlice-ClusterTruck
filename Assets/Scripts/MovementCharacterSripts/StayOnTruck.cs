@@ -5,13 +5,13 @@ using UnityEngine;
 public class StayOnTruck : MonoBehaviour
 {
     [SerializeField] private GameObject Player;
-    private void OnCollisionEnter(Collision collision)
+    private void OnTriggerEnter(Collider other)
     {
-        Debug.Log(collision.gameObject.name);
-        if (collision.gameObject.tag == "Truck")
+        Debug.Log(other.gameObject.name);
+        if (other.gameObject.tag == "Truck")
         {
             Debug.Log("On Truck");
-            Player.transform.parent = collision.transform;
+            Player.transform.parent = other.transform;
         }
     }
 

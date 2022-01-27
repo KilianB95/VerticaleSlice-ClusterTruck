@@ -5,7 +5,7 @@ using UnityEngine;
 public class PlayerMovement : MonoBehaviour
 {
     CharacterController characterController;
-    public float MovementSpeed = 4;
+    public float MovementSpeed = 30;
     
     
 
@@ -14,7 +14,7 @@ public class PlayerMovement : MonoBehaviour
         characterController = GetComponent<CharacterController>();
     }
 
-    private void Update()
+    private void FixedUpdate()
     {
         // player movement - forward, backwards, left, right
         float horizontal = Input.GetAxis("Horizontal") * MovementSpeed;
