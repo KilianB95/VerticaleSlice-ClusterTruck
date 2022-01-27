@@ -18,7 +18,7 @@ public class Acceleration : MonoBehaviour
 
     void FixedUpdate()
     {
-        rb.AddForce(Vector3.forward * forceAmount, ForceMode.Acceleration);
+        rb.AddForce(Vector3.forward * forceAmount, ForceMode.Impulse);
 
         
     }
