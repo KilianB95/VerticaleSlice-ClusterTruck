@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class Acceleration : MonoBehaviour
 {
-    public Rigidbody rb;
+    private Rigidbody rb;
     public float forceAmount = 20;
     private GameObject TruckPlaceHodler;
     
@@ -13,7 +13,7 @@ public class Acceleration : MonoBehaviour
     void Start()
     {
         //rb.AddForce(Vector3.forward * forceAmount, ForceMode.Acceleration);
-        
+        rb = gameObject.GetComponent<Rigidbody>();
     }
 
     void FixedUpdate()
