@@ -7,6 +7,6 @@ public class ReplayButton : MonoBehaviour
 {
  public void ReplayLevel()
     {
-        SceneManager.LoadScene("TestScene");
+        SceneManager.LoadScene("LevelDesignScene");
     }
 }
